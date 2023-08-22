@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pet Online - Reserve já o banho do seu Pet</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="/static/starter-template.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+    <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+            <span class="fs-4">Pet online</span>
+        </a>
+    </header>
+    <main>
+        {% block principal %}
+        <h1>Reserve já o banho do seu Pet</h1>
+        <a href="{% url 'reserva:criar_reserva' %}" class="btn btn-primary">Fazer Reserva</a>
+        {% endblock %}
+    </main>
+    <footer class="pt-5 my-5 text-muted border-top">
+        Curso Python Ultima School
+    </footer>
+    </div>
+    <script src="/static/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
